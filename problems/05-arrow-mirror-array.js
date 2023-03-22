@@ -9,7 +9,11 @@ mirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a
 ***********************************************************************/
 
 const mirrorArray = (array) => {
-  // Your code here
+  let reversed = [];
+
+  array.forEach(element => reversed.unshift(element));
+
+  return [...array, ...reversed];
 };
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
