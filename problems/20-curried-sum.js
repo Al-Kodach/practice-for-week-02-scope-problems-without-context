@@ -43,7 +43,20 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 ***********************************************************************/
 
 function curriedSum(numArgs) {
-  // Your code here
+  let arrOfNums = [];
+
+  const sumArr = arg => {
+    arrOfNums.push(arg);
+
+    if(arrOfNums.length === numArgs) {
+      const sum = arrOfNums.reduce((accum, el) => accum + el);
+
+      return sum
+    }
+    return sumArr;
+  }
+
+  return sumArr;
 }
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

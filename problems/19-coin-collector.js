@@ -25,7 +25,19 @@ Example 3:
 
 ***********************************************************************/
 function coinCollector(numCoins) {
-  // Your code here
+  let arrOfCoins = [];
+
+  const collector = coin => {
+    arrOfCoins.push(coin);
+
+    if(arrOfCoins.length === numCoins) {
+      return arrOfCoins;
+    }
+
+    return collector;
+  }
+
+  return collector;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
